@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Bodymody</title>
+    <!-- Добавлем файл со стилями -->
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Первая страница -->
+        <div id="pageStart"
+             class="start">
+            <div class="popup">
+                <div class="popup__container">
+                    <h1 class="popup__title">
+                        Создай свой коктейль
+                        <span>с лабораторией Bodymody</span>
+                    </h1>
+                    <p>Попробуй свои силы в разработке инновационных коктейлей! Смешай ингредиенты и проверь, сможешь ли
+                        ты переплюнуть Джейка из времени приключений!</p>
+                    <button id="buttonStart"
+                            class="button">Нахимичить</button>
+                </div>
+            </div>
+            <a class="author">@masyabananza</a>
+        </div>
+
+        <!-- Вторая страница -->
+        <div id="pageConstructor"
+             class="constructor"
+             style="display: none;">
+            <div class="row">
+                <!-- Колона слева -->
+                <div class="col col_left">
+                    <div class="col__header">
+                        <h2>Собери свой коктейль!</h2>
+                        <p>Выбери своё наполнение слоёв коктейля и посмотри, как он тебя изменит! Используй стрелочки
+                            для перемещения между слоями.</p>
+                    </div>
+                    <div class="cup">
+                        <div class="cup__wrapper">
+                            <!-- Стакан -->
+                            <div class="cup__layers"></div>
+                            <!-- Первый слой -->
+                            <div class="layer"
+                                 data-layer="1"
+                                 data-selected="1"></div>
+                            <!-- Стрелки влево/вправо для первого слоя -->
+                            <button class="button-arrow button-arrow_left"
+                                    data-layer="1"
+                                    data-direction="left"></button>
+                            <button class="button-arrow button-arrow_right"
+                                    data-layer="1"
+                                    data-direction="right"></button>
+
+                            <!-- Дальше также... слой, стрелки -->
+                            <div class="layer"
+                                 data-layer="2"
+                                 data-selected="1"></div>
+                            <button class="button-arrow button-arrow_left"
+                                    data-layer="2"
+                                    data-direction="left"></button>
+                            <button class="button-arrow button-arrow_right"
+                                    data-layer="2"
+                                    data-direction="right"></button>
+                            <div class="layer"
+                                 data-layer="3"
+                                 data-selected="1"></div>
+                            <button class="button-arrow button-arrow_left"
+                                    data-layer="3"
+                                    data-direction="left"></button>
+                            <button class="button-arrow button-arrow_right"
+                                    data-layer="3"
+                                    data-direction="right"></button>
+                        </div>
+
+                        <!-- Кнопка Выпить! -->
+                        <a id="buttonMix" href="#result" class="button">Выпить!</a>
+                    </div>
+                </div>
+
+                <!-- Колона справа -->
+                <div id="result" class="col col_right">
+                    <div class="col__header">
+                        <h2>
+                            Похоже, сегодня ты...
+                            <span id="resultTitle">%#*@&*%</span>
+                        </h2>
+                        <p id="resultSubtitle">Скорее выпей коктейль, чтобы узнать это!</p>
+                        <div class="cocktail-name">
+                            <img src="assets/img/cup_icon.svg"
+                                 alt="Cocktail">
+                            <span id="resultName">???</span>
+                        </div>
+                    </div>
+                    <!-- Картинка с результатом -->
+                    <img src="assets/img/result_0.png"
+                        alt="Бухни"
+                        class="result-ilustration__0"
+                        id="resultImg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавляем библиотеку jQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"
+            type="text/javascript"></script>
+    <!-- Добавляем скрипты JS -->
+    <script src="assets/js/script.js"
+            type="text/javascript"></script>
+</body>
+
+</html>
